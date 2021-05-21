@@ -43,7 +43,7 @@ pipeline {
         {
             steps
             {
-               sh 'cp /var/lib/jenkins/workspace/Project-1/target/java-tomcat-maven-example.war /opt/tomcat/webapps'
+               sh 'cp /root/.jenkins/workspace/Project-1/target/java-tomcat-maven-example.war /opt/tomcat/webapps'
             }
         }
     }
