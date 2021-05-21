@@ -1,15 +1,13 @@
 pipeline {
     agent any
-    environment {
-        PATH = "/opt/maven/bin:$PATH"
-    }
+    tools { maven 'mymaven' }
     stages
     {
         stage('SCM')
         {
             steps
             {
-                git 'https://github.com/daticahealth/java-tomcat-maven-example'
+                git 'https://github.com/nayak-code/java-tomcat-maven-example.git'
             }
         }
         stage('Buid')
