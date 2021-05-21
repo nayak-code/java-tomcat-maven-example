@@ -50,6 +50,7 @@ pipeline {
 			}
 		}
 	    }
+	}
         stage('Deploy on Tomcat')
         {
             steps
