@@ -39,6 +39,17 @@ pipeline {
                 }
             }
         }
+	stage('SQ_QualityGateCheck')
+        {
+	    steps
+	    {
+	        timeout(time: 1, Unit: 'HOURS') {
+			def qg = waitForQualityGate()
+		        if (qg.status != 'OK') {
+			    error "Pipeline aborted due to quality gate failure: ${qg.status}"
+			}
+		}
+	    }
         stage('Deploy on Tomcat')
         {
             steps
