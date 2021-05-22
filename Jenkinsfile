@@ -39,12 +39,5 @@ pipeline {
                 }
             }
         }
-        stage('Deploy on Tomcat')
-        {
-            steps
-            {
-               sh 'cp /root/.jenkins/workspace/Project-1/target/java-tomcat-maven-example.war /opt/tomcat/webapps'
-            }
-        }
     }
 }
