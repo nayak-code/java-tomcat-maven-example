@@ -14,7 +14,7 @@ pipeline {
         {
             steps
             {
-                sh 'mvn clean ${BUILD_NUMBER}'
+                sh 'mvn clean ${env.BUILD_NUMBER}'
             }
         }
         stage('Test')
