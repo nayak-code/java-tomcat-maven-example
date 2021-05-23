@@ -19,6 +19,14 @@ pipeline {
 		echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"
             }
         }
+	stage('Store war file basedon version')
+	{
+	    steps
+	    {
+	        sh 'mkdir -p /tmp/backup'
+		sh 'mv /root/.jenkins/workspace/Project-1/target/java-tomcat-maven-example.war target/1.${BUILD_NUMBER}.war'
+	    }
+	}
         stage('Test')
         {
             steps
