@@ -25,7 +25,7 @@ pipeline {
 	    {
 	        sh 'mkdir -p /tmp/backup'
 		sh 'mv /root/.jenkins/workspace/Project-1/target/java-tomcat-maven-example.war target/1.${BUILD_NUMBER}.war'
-		cp 'mv /root/.jenkins/workspace/Project-1/target/1.${BUILD_NUMBER}.war /tmp/backup'
+		sh 'cp /root/.jenkins/workspace/Project-1/target/1.${BUILD_NUMBER}.war /tmp/backup'
 	    }
 	}
         stage('Test')
