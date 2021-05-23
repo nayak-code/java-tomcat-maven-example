@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Welcome to DevOps 2021</h2>
+<h2>Succesfully deployed my app on Tomcat. Dale!</h2>
 </body>
 </html>
